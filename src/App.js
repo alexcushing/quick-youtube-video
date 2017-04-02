@@ -24,7 +24,7 @@ class App extends Component {
           className="input"
           placeholder="video URL"
         />
-        <button type="submit" onClick={this.submit}> submit </button>
+        <button type="submit" onClick={this.submit}> search </button>
         {
           this.state.search ? 
           <div>

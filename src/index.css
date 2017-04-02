@@ -5,11 +5,18 @@ body {
 }
 
 input {
-   margin: 50px 0px 50px 50px;
+   margin: 50px 5px 50px 50px;
+   width: 45%;
+   border: none;
+   border-bottom: solid .5px black;
 }
 
 button {
   margin: 0px 50px 0px 0px;
+  cursor: pointer;
+  color: white;
+  background-color: #202129;
+  border-color: #202129;
 }
 
 .video {
