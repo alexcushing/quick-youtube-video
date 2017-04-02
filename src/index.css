@@ -1,0 +1,18 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
+
+input {
+   margin: 50px 0px 50px 50px;
+}
+
+button {
+  margin: 0px 50px 0px 0px;
+}
+
+.video {
+  width: 100px;
+  margin: 0 auto;
+}
