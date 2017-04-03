@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import ReactPlayer from 'react-player'
+import FontAwesome from 'react-fontawesome'
 
 
 
@@ -28,10 +29,11 @@ class App extends Component {
       <div className={this.state.theme}>
       <button className='lighten' type="submit" onClick={this.toggleTheme}>
             {
-              this.state.theme === 'Main' ? "🌞" : "🌚"
+              this.state.theme === 'Main' ? <FontAwesome name="sun-o" /> : <FontAwesome name="moon-o" />
             }
           </button>
         <div className="App">
+        <form action="submit" onSubmit={this.submit}>
           <input
             type="text"
             onChange={this.onChange}
@@ -39,7 +41,10 @@ class App extends Component {
             className="input"
             placeholder="video URL"
           />
-          <button type="submit" onClick={this.submit}> search </button>
+          <button type="submit" onClick={this.submit}> 
+            <FontAwesome name="search" />
+          </button>
+        </form>
         </div>
         {
           this.state.search ? 

@@ -4,6 +4,12 @@ body {
   font-family: sans-serif;
 }
 
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
 .Main {
   display: flex;
   flex-direction: column;
@@ -46,24 +52,33 @@ body {
 }
 
 input {
+  border-radius: 5px 0 0 5px;
   margin: 50px 0px 50px 50px;
   padding: 10px;
   color: grey;
-  width: 45%;
+  width: 600px;
   font-size: 18px;
   border: solid #202129;
   background-color: #202129;
 }
+form {
+  display: flex;
+  flex-wrap: none;
+  align-content: center;
+}
 
 button {
   margin: 50px 50px 50px 0px;
+  border-radius: 0 5px 5px 0;
   color: grey;
   font-size: 18px;
+  width: 40px;
   padding: 10px;
   cursor: pointer;
   background-color: #202129;
   border: solid #202129;
 }
+
 
 .video {
   margin: 0 auto;
