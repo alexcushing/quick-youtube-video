@@ -1,9 +1,10 @@
 import React, { Component } from 'react';
 import ReactPlayer from 'react-player'
-import './App.css';
+
+
 
 class App extends Component {
-  state = {current : "", search: false};
+  state = {current : "", lockedin : "", search: false, theme : "Main"};
 
     onChange = (e) => {
       this.setState({current: e.target.value});
@@ -11,24 +12,39 @@ class App extends Component {
 
     submit = (e) => {
       e.preventDefault();
-      this.setState({search: true});
+      this.setState({search: true, lockedin: this.state.current});
+    }
+
+    toggleTheme = () => {
+      if (this.state.theme === "Main") {
+        this.setState({theme:"Alt"});
+      } else {
+        this.setState({theme:"Main"});
+      }
     }
 
   render() {
     return (
-      <div className="App">
-        <input
-          type="text"
-          onChange={this.onChange}
-          value={this.state.current}
-          className="input"
-          placeholder="video URL"
-        />
-        <button type="submit" onClick={this.submit}> search </button>
+      <div className={this.state.theme}>
+      <button className='lighten' type="submit" onClick={this.toggleTheme}>
+            {
+              this.state.theme === 'Main' ? "🌞" : "🌚"
+            }
+          </button>
+        <div className="App">
+          <input
+            type="text"
+            onChange={this.onChange}
+            value={this.state.current}
+            className="input"
+            placeholder="video URL"
+          />
+          <button type="submit" onClick={this.submit}> search </button>
+        </div>
         {
           this.state.search ? 
-          <div>
-            <ReactPlayer url={this.state.current} frameborder="0" className="video" controls="true" />
+          <div className = "video">
+            <ReactPlayer url={this.state.lockedin} frameborder="0" controls="true" />
           </div>
           :
           ''

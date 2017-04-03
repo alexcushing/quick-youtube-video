@@ -4,22 +4,90 @@ body {
   font-family: sans-serif;
 }
 
+.Main {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  min-height: 100vh;
+  background-color: black;
+}
+
+
+.Alt .App input {
+  background-color: lightgrey;
+  color:#202129;
+  border: solid lightgrey;
+}
+
+.Alt .App button {
+  background-color: lightgrey;
+  color:#202129;
+  border: solid lightgrey;
+}
+
+.Alt .App input:focus, button:focus,  button:hover{
+    outline: none;
+    color: black;
+}
+
+.Alt {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  min-height: 100vh;
+}
+
+
+.App {
+  text-align: center;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+}
+
 input {
-   margin: 50px 5px 50px 50px;
-   width: 45%;
-   border: none;
-   border-bottom: solid .5px black;
+  margin: 50px 0px 50px 50px;
+  padding: 10px;
+  color: grey;
+  width: 45%;
+  font-size: 18px;
+  border: solid #202129;
+  background-color: #202129;
 }
 
 button {
-  margin: 0px 50px 0px 0px;
+  margin: 50px 50px 50px 0px;
+  color: grey;
+  font-size: 18px;
+  padding: 10px;
   cursor: pointer;
-  color: white;
   background-color: #202129;
-  border-color: #202129;
+  border: solid #202129;
 }
 
 .video {
-  width: 100px;
   margin: 0 auto;
+  align-self: stretch !important;
+  flex: 1 !important;
+}
+
+textarea:focus, input:focus, button:focus,  button:hover{
+    outline: none;
+    color: lightgrey;
+}
+
+input::selection {
+  background-color: #a0daff;
+  color: black;
+}
+
+.lighten {
+  background: none !important;
+  border: none !important;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  margin: 0;
+  padding: 0;
+  /*filter: grayscale(100%);*/
 }
